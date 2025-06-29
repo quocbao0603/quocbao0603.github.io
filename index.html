@@ -1,208 +1,292 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bao Tran - Academic Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .portrait {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px 0;
+            border: 3px solid #eee;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 40px 0;
+            text-align: justify;
+        }
+
+        .bio a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .bio a:hover {
+            text-decoration: underline;
+        }
+
+        .news-section {
+            margin-top: 50px;
+        }
+
+        .news-header {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .news-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .news-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: #666;
+            white-space: nowrap;
+            width: 120px;
+            padding-right: 20px;
+        }
+
+        .news-content {
+            color: #444;
+        }
+
+        .news-content a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .section {
+            margin-top: 50px;
+        }
+
+        .section-header {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .publications, .experience, .skills {
+            margin-bottom: 30px;
+        }
+
+        .pub-item, .exp-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .pub-authors {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .pub-venue {
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .portrait {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .news-table td {
+                display: block;
+                padding: 5px 0;
+            }
+            
+            .news-date {
+                width: auto;
+                font-weight: bold;
+                padding-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Your Name - Academic Profile&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #2c3e50;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.portrait {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 3px solid #eee;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.contact-info {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bio {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 40px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: justify;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bio a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #3498db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bio a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #2c3e50;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-table {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-collapse: collapse;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-table td {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #eee;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>vertical-align: top;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-date {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>white-space: nowrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 120px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-right: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-content a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #3498db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.news-content a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.highlight {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fffacd;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2px 4px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 20px 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>.header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 2em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>.portrait {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>width: 150px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>height: 150px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>.news-table td {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 5px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>.news-date {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding-right: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Your Name&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://via.placeholder.com/200x200/cccccc/666666?text=Your+Photo" alt="Portrait" class="portrait"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contact-info"&gt;Department/Lab Name&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contact-info"&gt;University Name&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contact-info"&gt;City, State, Country&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contact-info"&gt;Email: your.email@university.edu&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="bio"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;I am currently a [your position] in [your department] at &lt;a href="https://your-university.edu"&gt;Your University&lt;/a&gt;, advised by &lt;a href="https://advisor-website.com"&gt;Prof. Advisor Name&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Before joining [current institution], I obtained my [previous degree] in [field] at [previous university], under the supervision of &lt;a href="#"&gt;Prof. Previous Advisor&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;My research interests lie in [your research areas] with focus on [specific topics you work on].&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="news-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-header"&gt;news&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;table class="news-table"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-date"&gt;Jun 15, 2025&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-content"&gt;Started new research project on &lt;span class="highlight"&gt;[project name]&lt;/span&gt;.&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-date"&gt;May 20, 2025&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-content"&gt;Paper accepted at &lt;a href="#"&gt;Conference Name 2025&lt;/a&gt;!&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-date"&gt;Apr 10, 2025&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-content"&gt;Presenting research at &lt;a href="#"&gt;Workshop Name&lt;/a&gt;.&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-date"&gt;Mar 05, 2025&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-content"&gt;Received [award/fellowship name] for outstanding research.&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-date"&gt;Feb 15, 2025&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-content"&gt;Started collaboration with &lt;a href="#"&gt;Research Lab&lt;/a&gt;.&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-date"&gt;Jan 20, 2025&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td class="news-content"&gt;New paper submitted to &lt;a href="#"&gt;Journal Name&lt;/a&gt;.&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="header">
+        <h1>Bao Tran</h1>
+        <img src="https://via.placeholder.com/200x200/cccccc/666666?text=Your+Photo" alt="Portrait" class="portrait">
+        <div class="contact-info">Computer Science Department</div>
+        <div class="contact-info">Virginia Commonwealth University</div>
+        <div class="contact-info">Richmond, Virginia, United States</div>
+        <div class="contact-info">Email: qbao0603@gmail.com</div>
+        <div class="contact-info">Phone: (737) 587-0730</div>
+    </div>
+
+    <div class="bio">
+        <p>I am currently a PhD student and Research Assistant in Computer Science at <a href="https://www.vcu.edu/">Virginia Commonwealth University</a>, where I focus on quantum computing optimization problems and machine learning infrastructure.</p>
+        
+        <p>Before joining VCU, I obtained my Bachelor's degree in Information Technology from University of Science (2018-2022). I have extensive industry experience as a Software Engineer at companies including KardiaChain, VNG Corporation, and have been mentoring algorithms and data structures at Big-O Coding since 2019.</p>
+        
+        <p>My research interests lie in <strong>Quantum Computing optimization</strong>, <strong>Graph Neural Networks</strong>, and <strong>Machine Learning Infrastructure</strong>. I am particularly focused on developing quantum-inspired optimization frameworks that enable large-scale problems to be solved on quantum hardware. I also have a strong background in competitive programming and have won multiple prizes in programming competitions.</p>
+        
+        <p>I am actively seeking Fall/Winter 2025 internship and new graduate opportunities in quantum computing, machine learning, and software engineering roles.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Publications</div>
+        <div class="publications">
+            <div class="pub-item">
+                <div class="pub-title">GRANITE: A Quantum-Inspired Optimization Framework using Graph Neural Networks</div>
+                <div class="pub-authors">Bao Tran, et al.</div>
+                <div class="pub-venue">AAAI 2025 (Top 5% of submissions) | <a href="https://arxiv.org/abs/2412.18571">arXiv:2412.18571</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Research Experience</div>
+        <div class="experience">
+            <div class="exp-item">
+                <div class="pub-title">Research Assistant - Virginia Commonwealth University</div>
+                <div class="pub-authors">January 2024 - Present</div>
+                <div class="news-content">
+                    • Developed end-to-end ML infrastructure pipeline for quantum-inspired optimization using GNNs<br>
+                    • Reduced deployment time from 3 days to under 3 hours through optimized pipeline design<br>
+                    • Created static batching system processing 5,000 input instances per batch
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Technical Skills</div>
+        <div class="skills">
+            <div class="skills-list">
+                <span class="skill-tag">Quantum Computing</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Graph Neural Networks</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Full-Stack Development</span>
+                <span class="skill-tag">Smart Contracts</span>
+                <span class="skill-tag">Parallel Programming</span>
+                <span class="skill-tag">Algorithms & Data Structures</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Blockchain</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-section">
+        <div class="news-header">news</div>
+        <table class="news-table">
+            <tr>
+                <td class="news-date">Dec 2024</td>
+                <td class="news-content">Paper <span class="highlight">GRANITE</span> accepted and presented at <a href="https://arxiv.org/abs/2412.18571">AAAI 2025</a> (top 5% of submissions)!</td>
+            </tr>
+            <tr>
+                <td class="news-date">Nov 2024</td>
+                <td class="news-content">Completed <a href="#">IBM Quantum Challenge 2024</a> certification.</td>
+            </tr>
+            <tr>
+                <td class="news-date">Jan 2024</td>
+                <td class="news-content">Started PhD program at <a href="https://www.vcu.edu/">Virginia Commonwealth University</a>.</td>
+            </tr>
+            <tr>
+                <td class="news-date">Mar 2023</td>
+                <td class="news-content">Completed Software Engineer role at <a href="#">KardiaChain</a> - developed NFT trading platform serving 10,000+ users.</td>
+            </tr>
+            <tr>
+                <td class="news-date">2021</td>
+                <td class="news-content">Achieved <span class="highlight">98th rank</span> in Google Kick Start 2021 competition.</td>
+            </tr>
+            <tr>
+                <td class="news-date">Ongoing</td>
+                <td class="news-content">Mentoring algorithms & data structures at <a href="#">Big-O Coding</a> - students placed at Amazon and Google.</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
