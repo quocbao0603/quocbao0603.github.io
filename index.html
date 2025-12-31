@@ -14,279 +14,709 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            max-width: 800px;
+            background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 2rem 1rem;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
         }
 
-        .header h1 {
-            font-size: 2.5em;
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #2c3e50;
+        /* Personal Info & Updates Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr;
         }
 
-        .portrait {
-            width: 200px;
-            height: 200px;
+        .personal-info {
+            background: linear-gradient(to bottom right, #dbeafe, #e0e7ff);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .avatar-container {
+            width: 128px;
+            height: 128px;
+            background: linear-gradient(to bottom right, #3b82f6, #6366f1);
             border-radius: 50%;
-            object-fit: cover;
-            margin: 20px 0;
-            border: 3px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
         }
 
-        .contact-info {
-            font-size: 1.1em;
-            color: #666;
-            margin-bottom: 10px;
+        .personal-info h1 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            text-align: center;
         }
 
-        .bio {
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin: 40px 0;
-            text-align: justify;
+        .personal-info .subtitle {
+            color: #475569;
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
-        .bio a {
-            color: #3498db;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #334155;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            color: #2563eb;
+            flex-shrink: 0;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
         }
 
-        .bio a:hover {
-            text-decoration: underline;
+        .btn-primary {
+            background: #2563eb;
+            color: white;
         }
 
-        .news-section {
-            margin-top: 50px;
+        .btn-primary:hover {
+            background: #1d4ed8;
         }
 
-        .news-header {
-            font-size: 1.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            text-decoration: underline;
+        .btn-dark {
+            background: #1e293b;
+            color: white;
         }
 
-        .news-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
+        .btn-dark:hover {
+            background: #0f172a;
         }
 
-        .news-table td {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            vertical-align: top;
+        .btn svg {
+            width: 16px;
+            height: 16px;
         }
 
-        .news-date {
+        /* Updates Section */
+        .updates-section {
+            padding: 2rem;
+            background: white;
+        }
+
+        .updates-section h2 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .updates-container {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .updates-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .updates-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+
+        .updates-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .updates-container::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .update-item {
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+            transition: background 0.2s;
+        }
+
+        .update-item:hover {
+            background: #f8fafc;
+        }
+
+        .update-date {
+            color: #2563eb;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
             font-weight: 600;
-            color: #666;
-            white-space: nowrap;
-            width: 120px;
-            padding-right: 20px;
         }
 
-        .news-content {
-            color: #444;
+        .update-title {
+            color: #1e293b;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
         }
 
-        .news-content a {
-            color: #3498db;
+        /* .update-description {
+            color: #475569;
+            font-size: 0.875rem;
+        } */
+        .update-description a {
+            color: #2563eb;
             text-decoration: none;
-        }
-
-        .news-content a:hover {
-            text-decoration: underline;
-        }
-
-        .highlight {
-            background-color: #fffacd;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-
-        .section {
-            margin-top: 50px;
-        }
-
-        .section-header {
-            font-size: 1.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            text-decoration: underline;
-        }
-
-        .publications, .experience, .skills {
-            margin-bottom: 30px;
-        }
-
-        .pub-item, .exp-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .pub-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .pub-authors {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-
-        .pub-venue {
-            color: #3498db;
             font-weight: 500;
         }
 
-        .skills-list {
+        .update-description a:hover {
+            text-decoration: underline;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content h3 {
+            color: #1e293b;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-content p {
+            color: #475569;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .skill-tag {
-            background-color: #3498db;
+        .tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 2rem;
+        }
+
+        .skills-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-header h2 {
+            color: #1e293b;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-header p {
+            color: #475569;
+        }
+
+        .mentees-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .mentee-card {
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.2s;
+        }
+
+        .mentee-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .mentee-image-container {
+            position: relative;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .mentee-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mentee-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+        }
+
+        .mentee-company {
             color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 20px 15px;
+        .mentee-content {
+            padding: 1.5rem;
+        }
+
+        .mentee-info {
+            list-style: none;
+        }
+
+        .mentee-info li {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+
+        .mentee-info li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Hobbies Section */
+        .hobbies-section {
+            padding: 2rem 2rem 0;
+        }
+
+        .hobbies-section h2 {
+            color: #1e293b;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hobbies-section > p {
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .hobby-item {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .hobby-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hobby-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .hobby-item:hover .hobby-overlay {
+            opacity: 1;
+        }
+
+        .hobby-content {
+            color: white;
+        }
+
+        .hobby-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hobby-content p {
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr 1fr;
             }
-            
-            .header h1 {
-                font-size: 2em;
+
+            .avatar-container {
+                margin: 0 0 1rem 0;
             }
-            
-            .portrait {
-                width: 150px;
-                height: 150px;
+
+            .personal-info h1,
+            .personal-info .subtitle {
+                text-align: left;
             }
-            
-            .news-table td {
-                display: block;
-                padding: 5px 0;
+
+            .project-item {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
             }
-            
-            .news-date {
-                width: auto;
-                font-weight: bold;
-                padding-right: 0;
+
+            .project-item:nth-child(even) .project-image {
+                order: 2;
+            }
+
+            .project-item:nth-child(even) .project-content {
+                order: 1;
+            }
+
+            .mentees-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hobbies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hobby-item {
+                height: 384px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Bao Tran</h1>
-        <img src="https://via.placeholder.com/200x200/cccccc/666666?text=Your+Photo" alt="Portrait" class="portrait">
-        <div class="contact-info">Computer Science Department</div>
-        <div class="contact-info">Virginia Commonwealth University</div>
-        <div class="contact-info">Richmond, Virginia, United States</div>
-        <div class="contact-info">Email: qbao0603@gmail.com</div>
-        <div class="contact-info">Phone: (737) 587-0730</div>
-    </div>
-
-    <div class="bio">
-        <p>I am currently a PhD student and Research Assistant in Computer Science at <a href="https://www.vcu.edu/">Virginia Commonwealth University</a>, where I focus on quantum computing optimization problems and machine learning infrastructure.</p>
-        
-        <p>Before joining VCU, I obtained my Bachelor's degree in Information Technology from University of Science (2018-2022). I have extensive industry experience as a Software Engineer at companies including KardiaChain, VNG Corporation, and have been mentoring algorithms and data structures at Big-O Coding since 2019.</p>
-        
-        <p>My research interests lie in <strong>Quantum Computing optimization</strong>, <strong>Graph Neural Networks</strong>, and <strong>Machine Learning Infrastructure</strong>. I am particularly focused on developing quantum-inspired optimization frameworks that enable large-scale problems to be solved on quantum hardware. I also have a strong background in competitive programming and have won multiple prizes in programming competitions.</p>
-        
-        <p>I am actively seeking Fall/Winter 2025 internship and new graduate opportunities in quantum computing, machine learning, and software engineering roles.</p>
-    </div>
-
-    <div class="section">
-        <div class="section-header">Publications</div>
-        <div class="publications">
-            <div class="pub-item">
-                <div class="pub-title">GRANITE: A Quantum-Inspired Optimization Framework using Graph Neural Networks</div>
-                <div class="pub-authors">Bao Tran, et al.</div>
-                <div class="pub-venue">AAAI 2025 (Top 5% of submissions) | <a href="https://arxiv.org/abs/2412.18571">arXiv:2412.18571</a></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-header">Research Experience</div>
-        <div class="experience">
-            <div class="exp-item">
-                <div class="pub-title">Research Assistant - Virginia Commonwealth University</div>
-                <div class="pub-authors">January 2024 - Present</div>
-                <div class="news-content">
-                    • Developed end-to-end ML infrastructure pipeline for quantum-inspired optimization using GNNs<br>
-                    • Reduced deployment time from 3 days to under 3 hours through optimized pipeline design<br>
-                    • Created static batching system processing 5,000 input instances per batch
+    <div class="container">
+        <!-- Personal Info & Updates Section -->
+        <div class="section-card">
+            <div class="hero-section">
+                <div class="personal-info">
+                    <div class="avatar-container">BT</div>
+                    <h1>Bao Tran</h1>
+                    <p class="subtitle">Software Developer with a diverse AI/ML knowledge</p>
+                    
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span>qbaocs2000@gmail.com</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <span>(737) 587-0730</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span>Richmond, Virginia, US</span>
+                    </div>
+                    
+                    <div class="social-buttons">
+                        <a href="https://www.linkedin.com/in/bao-tran-838a691b3/" class="btn btn-primary" target="_blank">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        
+                        <a href="https://scholar.google.com/citations?user=R15ppDMAAAAJ&hl=en" class="btn btn-primary" style="background: #4285f4;" target="_blank">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                            </svg>
+                            Scholar
+                        </a>
+                        
+                        <a href="https://codeforces.com/profile/_Bauz_" class="btn btn-primary" style="background: #1f8dd6;" target="_blank">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.672 21 0 20.328 0 19.5V9c0-.828.672-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5v-15c0-.828.672-1.5 1.5-1.5h3zm9 7.5c.828 0 1.5.672 1.5 1.5v7.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V12c0-.828.672-1.5 1.5-1.5h3z"/>
+                            </svg>
+                            Codeforces
+                        </a>
+                        
+                        <a href="https://leetcode.com/u/qbao0603/" class="btn btn-primary" style="background: #29344d;" target="_blank">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                            </svg>
+                            LeetCode
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="updates-section">
+                    <h2>News</h2>
+                    <div class="updates-container">
+                        <div class="update-item">
+                            <div class="update-date">Jul. 2025</div>
+                            <div class="update-title">QCE'25 Technical Paper Accepted</div>
+                            <div class="update-description">
+                                Our paper "<a href="https://quocbao0603.github.io/files/qce25_state_estimation_iterative_quantum_annealing.pdf" target="_blank">Noise-aware Quantum Annealing for State Estimation in Power Systems</a>" was accepted to the QAPP Track at IEEE Quantum Week (QCE'25); conference info: <a href="https://qce.quantum.ieee.org/2025/" target="_blank">IEEE QCE</a>.
+                            </div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Dec 2024</div>
+                            <div class="update-title">Paper Accepted at AAAI 2025</div>
+                            <div class="update-description">
+                                Our GRANITE paper was accepted and oral presented at AAAI 2025 (top 5% of submissions); 
+                                paper: <a href="https://arxiv.org/abs/2412.18571" target="_blank">arXiv:2412.18571</a>, 
+                                conference: <a href="https://aaai.org/conference/aaai/aaai-25/" target="_blank">AAAI 25</a> 
+                                (top 4 <a href="https://scholar.google.es/citations?view_op=top_venues&hl=en&vq=eng_artificialintelligence" target="_blank">AI venue</a>).
+                            </div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Nov 2024</div>
+                            <div class="update-title">IBM Quantum Challenge</div>
+                            <div class="update-description">Completed IBM Quantum Challenge 2024 certification</div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Jan 2024</div>
+                            <div class="update-title">Started PhD Program</div>
+                            <div class="update-description">Began PhD in Computer Science at Virginia Commonwealth University focusing on quantum computing</div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Mar 2023</div>
+                            <div class="update-title">Software Engineer at KardiaChain</div>
+                            <div class="update-description">Developed NFT trading platform serving 10,000+ users with blockchain technology</div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">2021</div>
+                            <div class="update-title">Google Kick Start Competition</div>
+                            <div class="update-description">Achieved 98th rank in Google Kick Start 2021 competition</div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Ongoing</div>
+                            <div class="update-title">Algorithm Mentor</div>
+                            <div class="update-description">Mentoring algorithms & data structures at Big-O Coding - students placed at Amazon and Google</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section-header">Technical Skills</div>
-        <div class="skills">
-            <div class="skills-list">
-                <span class="skill-tag">Quantum Computing</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Graph Neural Networks</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Full-Stack Development</span>
-                <span class="skill-tag">Smart Contracts</span>
-                <span class="skill-tag">Parallel Programming</span>
-                <span class="skill-tag">Algorithms & Data Structures</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Blockchain</span>
+        <!-- Publications Section -->
+        <div class="section-card projects-section">
+            <h2 class="section-title">Featured Publications</h2>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800" alt="Quantum Computing" class="project-image">
+                <div class="project-content">
+                    <h3>GRANITE: Quantum-Inspired Optimization Framework</h3>
+                    <p>A novel quantum-inspired optimization framework using Graph Neural Networks that enables large-scale combinatorial optimization problems to be solved efficiently on quantum hardware. Featured at AAAI 2025 (Top 5% of submissions).</p>
+                    <div class="tags">
+                        <span class="tag">Quantum Computing</span>
+                        <span class="tag">Graph Neural Networks</span>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://arxiv.org/abs/2412.18571" class="btn btn-primary">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            arXiv Paper
+                        </a>
+                        <a href="#" class="btn btn-dark">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="news-section">
-        <div class="news-header">news</div>
-        <table class="news-table">
-            <tr>
-                <td class="news-date">Dec 2024</td>
-                <td class="news-content">Paper <span class="highlight">GRANITE</span> accepted and presented at <a href="https://arxiv.org/abs/2412.18571">AAAI 2025</a> (top 5% of submissions)!</td>
-            </tr>
-            <tr>
-                <td class="news-date">Nov 2024</td>
-                <td class="news-content">Completed <a href="#">IBM Quantum Challenge 2024</a> certification.</td>
-            </tr>
-            <tr>
-                <td class="news-date">Jan 2024</td>
-                <td class="news-content">Started PhD program at <a href="https://www.vcu.edu/">Virginia Commonwealth University</a>.</td>
-            </tr>
-            <tr>
-                <td class="news-date">Mar 2023</td>
-                <td class="news-content">Completed Software Engineer role at <a href="#">KardiaChain</a> - developed NFT trading platform serving 10,000+ users.</td>
-            </tr>
-            <tr>
-                <td class="news-date">2021</td>
-                <td class="news-content">Achieved <span class="highlight">98th rank</span> in Google Kick Start 2021 competition.</td>
-            </tr>
-            <tr>
-                <td class="news-date">Ongoing</td>
-                <td class="news-content">Mentoring algorithms & data structures at <a href="#">Big-O Coding</a> - students placed at Amazon and Google.</td>
-            </tr>
-        </table>
+        <!-- Mentoring Section -->
+        <div class="section-card skills-section">
+            <div class="skills-header">
+                <h2>Data Structures & Algorithms Mentor</h2>
+                <p>Helping engineers land their dream jobs at top tech companies through personalized mentoring</p>
+            </div>
+            
+            <div class="mentees-grid">
+                <div class="mentee-card">
+                    <div class="mentee-image-container">
+                        <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800" alt="Google Office" class="mentee-image">
+                        <div class="mentee-overlay">
+                            <h3 class="mentee-company">Google</h3>
+                        </div>
+                    </div>
+                    <div class="mentee-content">
+                        <ul class="mentee-info">
+                            <li>Sarah Chen - Software Engineer L4, Search Team</li>
+                            <li>Cracked Google interview after 8 weeks of focused DS&A prep</li>
+                            <li>Improved problem-solving speed by 300%</li>
+                            <li>Mastered dynamic programming concepts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mentee-card">
+                    <div class="mentee-image-container">
+                        <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800" alt="Amazon Office" class="mentee-image">
+                        <div class="mentee-overlay">
+                            <h3 class="mentee-company">Amazon</h3>
+                        </div>
+                    </div>
+                    <div class="mentee-content">
+                        <ul class="mentee-info">
+                            <li>Michael Rodriguez - SDE II, AWS Services</li>
+                            <li>Transitioned from bootcamp to Amazon in 12 weeks</li>
+                            <li>Achieved 90% success rate on hard problems</li>
+                            <li>Learned all essential algorithms from scratch</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mentee-card">
+                    <div class="mentee-image-container">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Microsoft Office" class="mentee-image">
+                        <div class="mentee-overlay">
+                            <h3 class="mentee-company">Microsoft</h3>
+                        </div>
+                    </div>
+                    <div class="mentee-content">
+                        <ul class="mentee-info">
+                            <li>Priya Patel - Software Engineer, Azure Team</li>
+                            <li>Passed 5 technical interviews with top companies</li>
+                            <li>Specialized in graph algorithms and trees</li>
+                            <li>Built strong complexity analysis foundation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mentee-card">
+                    <div class="mentee-image-container">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800" alt="Tech Office" class="mentee-image">
+                        <div class="mentee-overlay">
+                            <h3 class="mentee-company">Meta</h3>
+                        </div>
+                    </div>
+                    <div class="mentee-content">
+                        <ul class="mentee-info">
+                            <li>James Kim - E4 Engineer, Infrastructure</li>
+                            <li>Advanced from mid to senior level in 6 months</li>
+                            <li>Mastered distributed systems design</li>
+                            <li>Developed optimal sliding window approaches</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="section-card">
+            <div class="hobbies-section">
+                <h2>Beyond the Code</h2>
+                <p>When I'm not working on quantum computing, you'll find me playing soccer or strategizing in competitive games</p>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-item">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800" alt="Soccer" class="hobby-image">
+                    <div class="hobby-overlay">
+                        <div class="hobby-content">
+                            <h3>Soccer Enthusiast</h3>
+                            <p>Playing midfielder for local league teams. Love the teamwork, strategy, and physical challenge of the beautiful game.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" alt="Gaming" class="hobby-image">
+                    <div class="hobby-overlay">
+                        <div class="hobby-content">
+                            <h3>Competitive Gaming</h3>
+                            <p>Platinum-ranked player who enjoys strategic depth and team coordination. Specializing in competitive multiplayer games.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
