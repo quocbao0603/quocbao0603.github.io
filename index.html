@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bao Tran Profile</title>
+    <title>Bao Tran's Personal Website</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
+        
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -44,6 +46,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+
+        .avatar-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .avatar-container {
@@ -473,7 +481,9 @@
         <div class="section-card">
             <div class="hero-section">
                 <div class="personal-info">
-                    <div class="avatar-container">BT</div>
+                    <div class="avatar-container">
+                        <img src="files/ava.jpeg" alt="Bao Tran" class="avatar-image">
+                    </div>
                     <h1>Bao Tran</h1>
                     <p class="subtitle">Software Developer with a diverse AI/ML knowledge</p>
                     
@@ -532,6 +542,11 @@
                 
                 <div class="updates-section">
                     <h2>News</h2>
+                    <div class="update-item">
+                        <div class="update-date">Upcoming - Feb. 2026</div>
+                        <div class="update-title">Software Engineer at Capital One</div>
+                        <div class="update-description">Will start as a New Grad Software Engineer at <a href="https://www.capitalone.com/" target="_blank">Capital One</a></div>
+                    </div>
                     <div class="updates-container">
                         <div class="update-item">
                             <div class="update-date">Jul. 2025</div>
@@ -551,29 +566,27 @@
                             </div>
                         </div>
                         <div class="update-item">
-                            <div class="update-date">Nov 2024</div>
+                            <div class="update-date">June 2024</div>
                             <div class="update-title">IBM Quantum Challenge</div>
-                            <div class="update-description">Completed IBM Quantum Challenge 2024 certification</div>
-                        </div>
+                            <div class="update-description">
+                                Completed <a href="https://www.credly.com/badges/a14c98df-ec66-44d3-a9e2-16ef1c1b78c0/linked_in_profile" target="_blank">IBM Quantum Challenge 2024</a> certification from <a href="https://quantum.cloud.ibm.com/" target="_blank">IBM Quantum</a>.
+                            </div>                        </div>
                         <div class="update-item">
                             <div class="update-date">Jan 2024</div>
                             <div class="update-title">Started PhD Program</div>
-                            <div class="update-description">Began PhD in Computer Science at Virginia Commonwealth University focusing on quantum computing</div>
-                        </div>
-                        <div class="update-item">
-                            <div class="update-date">Mar 2023</div>
-                            <div class="update-title">Software Engineer at KardiaChain</div>
-                            <div class="update-description">Developed NFT trading platform serving 10,000+ users with blockchain technology</div>
+                            Began PhD in Computer Science at <a href="https://egr.vcu.edu/" target="_blank">Virginia Commonwealth University</a> focusing on applying AI/ML for quantum computing
                         </div>
                         <div class="update-item">
                             <div class="update-date">2021</div>
-                            <div class="update-title">Google Kick Start Competition</div>
-                            <div class="update-description">Achieved 98th rank in Google Kick Start 2021 competition</div>
+                            <div class="update-title">Google Kick Start Competition & </div>
+                            <div class="update-description">
+                                Ranked <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/certificate/807121489853916" target="_blank">1602 globally</a> in Meta Hacker Cup Round 2, ranked <a href="https://drive.google.com/file/d/1c-wYHiKrs2RiuGEt5JU7bqi5lj7jqFQo/view" target="_blank">98/19850</a> in Round A Google Kickstart
+                            </div>
                         </div>
                         <div class="update-item">
                             <div class="update-date">Ongoing</div>
-                            <div class="update-title">Algorithm Mentor</div>
-                            <div class="update-description">Mentoring algorithms & data structures at Big-O Coding - students placed at Amazon and Google</div>
+                            <div class="update-title">Leetcode Mentor</div>
+                            <div class="update-description">Mentoring algorithms & data structures</div>
                         </div>
                     </div>
                 </div>
@@ -616,7 +629,7 @@
         <div class="section-card skills-section">
             <div class="skills-header">
                 <h2>Data Structures & Algorithms Mentor</h2>
-                <p>Helping engineers land their dream jobs at top tech companies through personalized mentoring</p>
+                <p>Helping engineers land their dream jobs at top tech companies through 1-on-1 mentoring</p>
             </div>
             
             <div class="mentees-grid">
@@ -629,10 +642,23 @@
                     </div>
                     <div class="mentee-content">
                         <ul class="mentee-info">
-                            <li>Sarah Chen - Software Engineer L4, Search Team</li>
-                            <li>Cracked Google interview after 8 weeks of focused DS&A prep</li>
-                            <li>Improved problem-solving speed by 300%</li>
-                            <li>Mastered dynamic programming concepts</li>
+                            <li>Christopher (Loc) Le https://www.linkedin.com/in/chrislevn/ </li>
+                            <li>Google offer after >1year of focused DS&A prep</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mentee-card">
+                    <div class="mentee-image-container">
+                        <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800" alt="Google Office" class="mentee-image">
+                        <div class="mentee-overlay">
+                            <h3 class="mentee-company">Google</h3>
+                        </div>
+                    </div>
+                    <div class="mentee-content">
+                        <ul class="mentee-info">
+                            <li>Amy Tuong Nguyen https://www.linkedin.com/in/amynnct/ </li>
+                            <li>Google offer after ~6 months of focused DS&A prep</li>
                         </ul>
                     </div>
                 </div>
@@ -646,15 +672,16 @@
                     </div>
                     <div class="mentee-content">
                         <ul class="mentee-info">
-                            <li>Michael Rodriguez - SDE II, AWS Services</li>
-                            <li>Transitioned from bootcamp to Amazon in 12 weeks</li>
-                            <li>Achieved 90% success rate on hard problems</li>
-                            <li>Learned all essential algorithms from scratch</li>
+                            <li>Thong Vo </li>
+                            <li>Google offer after ~3 months of focused DS&A prep</li>
+
                         </ul>
                     </div>
                 </div>
 
-                <div class="mentee-card">
+
+                <!-- MS -->
+                <!-- <div class="mentee-card">
                     <div class="mentee-image-container">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Microsoft Office" class="mentee-image">
                         <div class="mentee-overlay">
@@ -669,7 +696,7 @@
                             <li>Built strong complexity analysis foundation</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="mentee-card">
                     <div class="mentee-image-container">
@@ -694,7 +721,7 @@
         <div class="section-card">
             <div class="hobbies-section">
                 <h2>Beyond the Code</h2>
-                <p>When I'm not working on quantum computing, you'll find me playing soccer or strategizing in competitive games</p>
+                <p>When I'm not working, you'll find me playing soccer or competitive games like League</p>
             </div>
             <div class="hobbies-grid">
                 <div class="hobby-item">
