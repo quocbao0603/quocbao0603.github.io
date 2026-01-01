@@ -249,6 +249,12 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .project-card-image:hover {
+            transform: scale(1.05);
         }
 
         .project-card-content {
@@ -288,6 +294,58 @@
             display: flex;
             gap: 0.75rem;
             flex-wrap: wrap;
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            animation: zoomIn 0.3s;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10000;
+        }
+
+        .lightbox-close:hover {
+            color: #bbb;
         }
 
         /* Skills Section */
@@ -631,6 +689,12 @@
     </style>
 </head>
 <body>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <div class="container">
         <!-- Personal Info & Updates Section -->
         <div class="section-card">
@@ -697,12 +761,24 @@
                 
                 <div class="updates-section">
                     <h2>News</h2>
-                    <div class="update-item">
-                        <div class="update-date">Upcoming - Feb. 2026</div>
-                        <div class="update-title">Software Engineer at Capital One</div>
-                        <div class="update-description">Will start as a New Grad Software Engineer at <a href="https://www.capitalone.com/" target="_blank">Capital One</a></div>
-                    </div>
                     <div class="updates-container">
+                        <div class="update-item">
+                            <div class="update-date">Ongoing</div>
+                            <div class="update-title">Leetcode/ Algorithms & Data structures Mentor</div>
+                            <!-- <div class="update-description">Mentoring </div> -->
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Upcoming - Feb. 2026</div>
+                            <div class="update-title">Software Engineer at Capital One</div>
+                            <div class="update-description">Will start as a New Grad Software Engineer at <a href="https://www.capitalone.com/" target="_blank">Capital One</a></div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-date">Dec. 2025</div>
+                            <div class="update-title">VCU Master's Graduated </div>
+                            <div class="update-description">
+                                Officially dropout from my PhD program at <a href="https://egr.vcu.edu/" target="_blank">VCU</a> in Computer Science with a 4.0 GPA.
+                            </div>
+                        </div>
                         <div class="update-item">
                             <div class="update-date">Jul. 2025</div>
                             <div class="update-title">QCE'25 Technical Paper Accepted</div>
@@ -733,16 +809,12 @@
                         </div>
                         <div class="update-item">
                             <div class="update-date">2021</div>
-                            <div class="update-title">Google Kick Start Competition & </div>
+                            <div class="update-title">Google Kick Start & Meta Hacker Cup </div>
                             <div class="update-description">
                                 Ranked <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/certificate/807121489853916" target="_blank">1602 globally</a> in Meta Hacker Cup Round 2, ranked <a href="https://drive.google.com/file/d/1c-wYHiKrs2RiuGEt5JU7bqi5lj7jqFQo/view" target="_blank">98/19850</a> in Round A Google Kickstart
                             </div>
                         </div>
-                        <div class="update-item">
-                            <div class="update-date">Ongoing</div>
-                            <div class="update-title">Leetcode Mentor</div>
-                            <div class="update-description">Mentoring algorithms & data structures</div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -755,16 +827,15 @@
             <div class="projects-grid">
                 <!-- Project 1: GRANITE -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800" alt="GRANITE Quantum Computing" class="project-card-image">
+                    <img src="files/granite.jpg" alt="GRANITE Quantum Computing" class="project-card-image" onclick="openLightbox(this)">
                     <div class="project-card-content">
                         <h3>GRANITE - Quantum-Inspired Optimization</h3>
-                        <p>End-to-end ML infrastructure pipeline for a quantum-inspired optimization framework using Graph Neural Networks (GNNs) that enables large-scale problems to be solved on quantum hardware. Published in top 5% at AAAI 2025.</p>
+                        <p> ML infrastructure pipeline for a quantum-inspired optimization framework. Published in top 5% at AAAI 2025.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">PyTorch</span>
-                            <span class="tag">GNN</span>
-                            <span class="tag">CUDA</span>
                             <span class="tag">ML Pipeline</span>
+                            <span class="tag">C++/CUDA</span>
                         </div>
                         <div class="project-links">
                             <a href="https://arxiv.org/abs/2412.18571" class="btn btn-primary" target="_blank">
@@ -785,17 +856,17 @@
 
                 <!-- Project 2: NFT Marketplace -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800" alt="NFT Marketplace" class="project-card-image">
+                    <img src="https://cdn.prod.website-files.com/65217fd9e31608b8b68141ba/653fe24bb71de2b2158b920c_6536e7fa610d4fbd5936c7a1_651657e8de2af13bda6f8875_Compatibility%252520(1).png" alt="NFT Marketplace" class="project-card-image" onclick="openLightbox(this)">
                     <div class="project-card-content">
                         <h3>NFT Marketplace - OpenSea-like Platform</h3>
-                        <p>E-commerce web application for trading NFTs across 7 games, serving 10,000 monthly active users. Earned 50 BNB (~$13,500) and 3,000 USDT in trading fees. Implemented AWS S3 reducing image load times by 60%.</p>
+                        <!-- <p>Trading NFTs</p> -->
                         <div class="tags">
                             <span class="tag">React</span>
-                            <span class="tag">Spring Boot</span>
+                            <!-- <span class="tag">Spring Boot</span> -->
                             <span class="tag">Node.js</span>
                             <span class="tag">MySQL</span>
                             <span class="tag">AWS S3</span>
-                            <span class="tag">Docker</span>
+                            <!-- <span class="tag">Docker</span> -->
                         </div>
                         <div class="project-links">
                             <a href="https://www.kardiachain.io/" class="btn btn-primary" target="_blank">
@@ -810,7 +881,7 @@
 
                 <!-- Project 3: Cat Mario -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800" alt="Cat Mario Game" class="project-card-image">
+                    <img src="files/Cat_mario.png" alt="Cat Mario Game" class="project-card-image" onclick="openLightbox(this)">
                     <div class="project-card-content">
                         <h3>Cat Mario - Platformer with Traps</h3>
                         <p>A challenging platformer game featuring a cat character navigating through trap-filled levels. Built with engaging mechanics and smooth gameplay.</p>
@@ -845,7 +916,7 @@
 
                 <!-- Project 4: Red Light Green Light -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800" alt="Red Light Green Light Game" class="project-card-image">
+                    <img src="files/squid_game.png" alt="Red Light Green Light Game" class="project-card-image" onclick="openLightbox(this)">
                     <div class="project-card-content">
                         <h3>Red Light Green Light</h3>
                         <p>An exciting survival game inspired by the popular challenge. Players must strategically move and freeze to avoid elimination in this fast-paced competitive experience.</p>
@@ -881,7 +952,7 @@
                     <h2>Data Structures & Algorithms Mentor</h2>
                     <p>Helping engineers land their dream jobs at top tech companies through 1-on-1 mentoring</p>
                 </div>
-                <a href="https://calendly.com/your-calendly-link" class="btn-book-session" target="_blank">
+                <a href="https://calendly.com/qbaocs2000/30min" class="btn-book-session" target="_blank">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
@@ -1011,11 +1082,11 @@
                     <h3>Ready to Level Up Your Career?</h3>
                     <p>1-on-1 mentorship sessions | Personalized study plans | Mock interviews | Career guidance</p>
                 </div>
-                <a href="https://calendly.com/your-calendly-link" class="btn-book-large" target="_blank">
+                <a href="https://calendly.com/qbaocs2000/30min" class="btn-book-large" target="_blank">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
-                    Book Now - $150/hour
+                    Book Now (Free)
                 </a>
             </div>
         </div>
@@ -1048,5 +1119,35 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.classList.add('active');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        // Close lightbox when clicking on the close button
+        document.querySelector('.lightbox-close').addEventListener('click', function() {
+            document.getElementById('lightbox').classList.remove('active');
+        });
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('lightbox').classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
